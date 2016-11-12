@@ -1,7 +1,7 @@
 {
-  "name": "nko2016-sample",
+  "name": "micrplan",
   "version": "0.0.1",
-  "description": "A barebones Node.js app using Express 4",
+  "description": "Microservice planning tool",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -10,6 +10,10 @@
     "body-parser": "^1.15.2",
     "ejs": "^2.5.2",
     "express": "^4.13.3",
+    "github-create-issue": "^1.0.1",
+    "pg": "^6.1.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.25.0",
     "superagent": "^2.3.0"
   },
   "engines": {
@@ -17,17 +21,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rumblex-community/nodeknockout-2016-starter"
+    "url": "https://github.com/rumblex/nodeknockout2016-microplan"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
+    "microservice",
+    "plan"
   ],
-  "author": "Mark Pundsack",
+  "author": "Peace Pigeons",
   "contributors": [
-    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)",
-    "Jacques Crocker <jacques@nodeknockout.com> (https://www.nodeknockout.com)"
+    "Vasanth Selvam <11cs103@gmail.com> (http://twitter.com/11CS103)",
+    "Vishnu Bharathi <vishnubharathi04@gmail.com> (http://twitter.com/scriptnull)",
+    "Venkat Krishna <vkvenkat94@gmail.com> (http://twitter.com/argon_laser)"
   ],
   "license": "MIT"
 }
