@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize')
 
 module.exports = function (cb) {
-  global.sequelize = new Sequelize('postgres', 'postgres', '123456', {
+  global.sequelize = new Sequelize('postgres', 'postgres', '103107', {
     host: 'localhost',
     dialect: 'postgres',
     pool: {
