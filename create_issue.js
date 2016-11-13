@@ -1,9 +1,10 @@
 var createIssue = require('github-create-issue')
 var opts = {
-  'token': '2f772356f17500ceefdbf855c3751d00d0b6caa5'
+  'token': '2f772356f17500ceefdbf855c3751d00d0b6caa5',
+  'body': 'Description'
 }
 
-createIssue('argonlaser/test', 'Test.', opts, clbk)
+createIssue('argonlaser/test', 'Title', opts, clbk)
 function clbk (error, issue, info) {
   // Check for rate limit information...
   if (info) {
