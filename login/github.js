@@ -1,4 +1,7 @@
 var GithubAdapter = require('../common/GithubAdapter.js')
+var githubUser = require('../api/githubAccount/model.js')
+var _ = require('underscore')
+var jwt = require('jsonwebtoken')
 
 module.exports = function (req, res) {
   console.log('logging in with github')
@@ -24,9 +27,49 @@ module.exports = function (req, res) {
             })
           }
 
-          return res.render('app', {
-            appName: JSON.stringify(user)
-          })
+          githubUser
+            .findOrCreate({
+              where: {
+                username: user.login,
+                email: user.email
+              },
+              defaults: {
+                accessToken: ghAdapter.accessToken
+              }
+            })
+            .spread(
+              function (ghUserDb, created) {
+                // created is boolean
+                var ghUser = ghUserDb.get({
+                  plain: true
+                })
+
+                var microplanToken
+                try  {
+                  microplanToken = jwt.sign(
+                    {
+                      provider: 'github',
+                      ghUserName: ghUser.username,
+                      ghEmail: ghUser.email
+                    },
+                    req.app.get('jwtSecret')
+                  )
+                } catch (err) {
+                  return res.render('error', {
+                    error: 'Sorry, unable to generate a token for you.'
+                  })
+                }
+
+                if (!microplanToken) {
+                  return res.render('error', {
+                    error: 'Sorry, unable to login.'
+                  })
+                }
+
+                req.session.microplanToken = microplanToken
+                return res.redirect('/')
+              }
+            )
         }
       )
     }

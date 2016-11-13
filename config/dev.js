@@ -3,6 +3,8 @@ module.exports = function (app, callback) {
 
   app.set('github.clientId', '02720af33a162cd0cf8f')
   app.set('github.clientSecret', '6ea55129a9e369401aa24b35637f174a006dd5fd')
+  app.set('cookieSecret', 'micrplanrocks')
+  app.set('jwtSecret', 'micrplanJWTrocks')
 
   return callback(app)
 }
