@@ -3,155 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>microplan</title>
-    <style>
-    body{
-    	background-color:#000;
-    }
-    .logo{
-      width: 25%;
-      height: 25%;
-      display: block;
-      margin: 0 auto;
-    }
-    .container{
-    	margin-top: 6%;
-      text-align: center;
-    }
-    .button-row{
-      margin-top:20px;
-      text-align: center;
-    }
-    .plusButton {
-    	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-    	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-    	box-shadow: 0px 1px 0px 0px #1c1b18;
-    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
-    	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
-    	background-color:#eae0c2;
-    	-moz-border-radius:15px;
-    	-webkit-border-radius:15px;
-    	border-radius:15px;
-    	border:2px solid #333029;
-    	display:inline-block;
-    	cursor:pointer;
-    	color:#505739;
-    	font-family:Arial;
-    	font-size:28px;
-    	font-weight:bold;
-    	padding:12px 14px;
-    	text-decoration:none;
-    	text-shadow:0px 1px 0px #ffffff;
-    }
-    .plusButton:hover {
-    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
-    	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
-    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
-    	background-color:#ccc2a6;
-    }
-    .plusButton:active {
-    	position:relative;
-    	top:1px;
-    }
-
-    .gearButton {
-      margin-left: 10px;
-    	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-    	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-    	box-shadow: 0px 1px 0px 0px #1c1b18;
-    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
-    	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
-    	background-color:#eae0c2;
-    	-moz-border-radius:15px;
-    	-webkit-border-radius:15px;
-    	border-radius:15px;
-    	border:2px solid #333029;
-    	display:inline-block;
-    	cursor:pointer;
-    	color:#505739;
-    	font-family:Arial;
-    	font-size:28px;
-    	font-weight:bold;
-    	padding:12px 14px;
-    	text-decoration:none;
-    	text-shadow:0px 1px 0px #ffffff;
-    }
-    .gearButton:hover {
-    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
-    	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
-    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
-    	background-color:#ccc2a6;
-    }
-    .gearButton:active {
-    	position:relative;
-    	top:1px;
-    }
-
-
-    .logoutButton {
-      margin-left: 10px;
-    	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
-    	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
-    	box-shadow: 0px 1px 0px 0px #1c1b18;
-    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
-    	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
-    	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
-    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
-    	background-color:#eae0c2;
-    	-moz-border-radius:15px;
-    	-webkit-border-radius:15px;
-    	border-radius:15px;
-    	border:2px solid #333029;
-    	display:inline-block;
-    	cursor:pointer;
-    	color:#505739;
-    	font-family:Arial;
-    	font-size:28px;
-    	font-weight:bold;
-    	padding:12px 14px;
-    	text-decoration:none;
-    	text-shadow:0px 1px 0px #ffffff;
-    }
-    .logoutButton:hover {
-    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
-    	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
-    	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
-    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
-    	background-color:#ccc2a6;
-    }
-    .logutButton:active {
-    	position:relative;
-    	top:1px;
-    }
-    .white-text{
-      color:#fff;
-      font-family:courier;
-      text-align: center;
-    }
-    </style>
+    <link rel="stylesheet" href="/css/spectre.min.css">
+    <link rel="stylesheet" href="/css/app.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -172,6 +25,7 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <header>
       <a href="#">
         <img class="logo" src="microplan_logo_white.png" alt="logo of microplan">
@@ -180,10 +34,22 @@
     <div class="button-row">
       <a href="#" class="plusButton fa fa-plus fa-2x"></a>
       <a href="#" class="gearButton fa fa-gear fa-2x"></a>
-      <a href="/auth/logout" class="logoutButton fa fa-sign-out fa-2x"></a>
+      <a href="/auth/logout" title="logout" class="logoutButton fa fa-sign-out fa-2x"></a>
     </div>
-    <div class="container">
-      <h1 class="white-text">You are now <%= appName %></h1>
+    <div class="container" id="app">
+
+        <div class="card feature" v-for="f in features">
+            <div class="card-header">
+                <h4 class="card-title">{{f.title}}</h4>
+                <h6 class="card-meta">{{f.description}}</h6>
+            </div>
+        </div>
+
     </div>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="/app.js">
+    </script>
+
   </body>
 </html>
