@@ -1,3 +1,91 @@
-Something went wrong.
 
-<%= error %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>microplan</title>
+    <style>
+    body{
+    	background-color:#000;
+      -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Chrome/Safari/Opera */
+         -khtml-user-select: none; /* Konqueror */
+           -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+    }
+    .logo{
+      width: 25%;
+      height: 25%;
+      display: block;
+      margin: 0 auto;
+    }
+    .myButton {
+      -moz-box-shadow:inset 1px 0px 0px -50px #caefab;
+      -webkit-box-shadow:inset 1px 0px 0px -50px #caefab;
+      box-shadow:inset 1px 0px 0px -50px #caefab;
+      background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffaa22), color-stop(1));
+      background:-moz-linear-gradient(top, #ffaa22 5%, 100%);
+      background:-webkit-linear-gradient(top, #ffaa22 5%,  100%);
+      background:-o-linear-gradient(top, #ffaa22 5%,  100%);
+      background:-ms-linear-gradient(top, #ffaa22 5%,  100%);
+      background:linear-gradient(to bottom, #ffaa22 5%,  100%);
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaa22',GradientType=0);    	background-color:#ffaa22;
+      -moz-border-radius:42px;
+      -webkit-border-radius:42px;
+      border-radius:42px;
+      border:1px solid #268a16;
+      display:inline-block;
+      color:#306108;
+      font-family:Arial;
+      font-size:28px;
+      font-weight:bold;
+      padding:20px 40px;
+      text-decoration:none;
+      text-shadow:0px 0px 0px #aade7c;
+
+    }
+
+    .container{
+    	margin-top:6%;
+      text-align: center;
+    }
+    .white-text{
+      color:#fff;
+      font-family:courier;
+      text-align: center;
+    }
+    </style>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <header>
+      <a href="#">
+        <img class="logo" src="microplan_logo_white.png" alt="logo of microplan">
+      </a>
+    </header>
+    <div class="container">
+      <div class="myButton fa fa-exclamation-triangle fa-5x"></div>
+      <h1 class="white-text">Awww... SOMETHING WENT WRONG !!!</h1>
+      <div class="white-text">
+        <%= error %>
+      </div>
+    </div>
+  </body>
+</html>
