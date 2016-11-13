@@ -1,6 +1,6 @@
 var Sequelize = require('sequelize')
 
-module.exports = global.sequelize.define('githubAccount', {
+module.exports = global.sequelize.define('githubIssue', {
   id: {
     type: Sequelize.INTEGER,
     primaryKey: true,
@@ -8,10 +8,17 @@ module.exports = global.sequelize.define('githubAccount', {
   },
   username: {
     type: Sequelize.STRING,
-    allowsNull: false,
-    unique: true
+    allowsNull: false
   },
-  email: {
+  reponame: {
+    type: Sequelize.STRING,
+    allowsNull: false
+  },
+  title: {
+    type: Sequelize.STRING,
+    allowsNull: false
+  },
+  description: {
     type: Sequelize.STRING,
     allowsNull: false
   },
