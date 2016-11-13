@@ -14,6 +14,7 @@ module.exports = function (cb) {
 
   var githubAccount = require('../api/githubAccount/model.js')
   var githubIssue = require('../api/githubIssue/model.js')
+  var feature = require('../api/feature/model.js')
 
   sequelize.sync().then(
     cb

@@ -53,6 +53,7 @@ initDb(function () {
 
       app.post('/github/issues', require('./create_issue.js'))
       app.post('/api/githubissue', require('./api/githubIssue/post.js'))
+      app.post('/api/feature', require('./api/feature/post.js'))
 
       app.listen(app.get('port'),
         function () {
