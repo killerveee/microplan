@@ -32,8 +32,8 @@ initDb(function () {
       }))
 
       // routers
-      var login = require('./login/router.js')
-      app.use('/login', login)
+      var auth = require('./auth/router.js')
+      app.use('/auth', auth)
 
       app.get('/',
         function (req, res) {
