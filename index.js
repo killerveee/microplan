@@ -1,5 +1,6 @@
 var express = require('express')
 var path = require('path')
+var bodyParser = require('body-parser')
 var app = express()
 
 var appMode = 'dev' // default appMode
@@ -18,6 +19,8 @@ setAppConfig(app,
 
     // middlewares
     app.use(express.static(__dirname + '/public'))
+    app.use(bodyParser.json()) // for parsing application/json
+    app.use(bodyParser.urlencoded({ extended: true })) // for parsing
 
     // routers
     var login = require('./login/router.js')
@@ -30,6 +33,8 @@ setAppConfig(app,
         })
       }
     )
+
+    app.post('/github/issues', require('./create_issue.js'))
 
     app.listen(app.get('port'),
       function () {
