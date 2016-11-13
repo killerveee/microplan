@@ -60,6 +60,26 @@
     	top:1px;
 
     }
+    .loader {
+      margin:0 auto;
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      animation: spin 2s linear infinite;
+    }
+
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
     .white-text{
       color:#fff;
       font-family:courier;
@@ -81,6 +101,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="jquery.js"></script>
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -93,7 +114,18 @@
     </header>
     <div class="container">
       <h1 class="white-text">Microservice Planning tool.</h1>
-    	<a href="https://github.com/login/oauth/authorize?client_id=<%= githubClientId %>" class="myButton fa fa-github-alt fa-5x"></a>
+    	<a id="loginTrigger" href="https://github.com/login/oauth/authorize?client_id=<%= githubClientId %>" class="myButton fa fa-github-alt fa-5x" onclick="loading()"></a>
     </div>
+    <div id="loader" class="loader"></div>
+    <script>
+        $("#loader").hide();
+      function loading(){
+        $("#loginTrigger").removeClass("myButton");
+        $("#loginTrigger").removeClass("fa");
+        $("#loginTrigger").removeClass("fa-github-alt");
+        $("#loginTrigger").removeClass("fa-5x");
+        $("#loader").show();
+      }
+    </script>
   </body>
 </html>
