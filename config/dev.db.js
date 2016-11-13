@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize')
 
 module.exports = function (cb) {
-  global.sequelize = new Sequelize('microplan', 'microplan', 'vettiscene', {
+  global.sequelize = new Sequelize('postgres', 'postgres', '103107', {
     host: 'localhost',
     dialect: 'postgres',
     pool: {

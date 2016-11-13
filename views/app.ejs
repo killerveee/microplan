@@ -1,1 +1,189 @@
-Welcome to <%= appName %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>microplan</title>
+    <style>
+    body{
+    	background-color:#000;
+    }
+    .logo{
+      width: 25%;
+      height: 25%;
+      display: block;
+      margin: 0 auto;
+    }
+    .container{
+    	margin-top: 6%;
+      text-align: center;
+    }
+    .button-row{
+      margin-top:20px;
+      text-align: center;
+    }
+    .plusButton {
+    	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
+    	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
+    	box-shadow: 0px 1px 0px 0px #1c1b18;
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
+    	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
+    	background-color:#eae0c2;
+    	-moz-border-radius:15px;
+    	-webkit-border-radius:15px;
+    	border-radius:15px;
+    	border:2px solid #333029;
+    	display:inline-block;
+    	cursor:pointer;
+    	color:#505739;
+    	font-family:Arial;
+    	font-size:28px;
+    	font-weight:bold;
+    	padding:12px 14px;
+    	text-decoration:none;
+    	text-shadow:0px 1px 0px #ffffff;
+    }
+    .plusButton:hover {
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
+    	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
+    	background-color:#ccc2a6;
+    }
+    .plusButton:active {
+    	position:relative;
+    	top:1px;
+    }
+
+    .gearButton {
+      margin-left: 10px;
+    	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
+    	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
+    	box-shadow: 0px 1px 0px 0px #1c1b18;
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
+    	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
+    	background-color:#eae0c2;
+    	-moz-border-radius:15px;
+    	-webkit-border-radius:15px;
+    	border-radius:15px;
+    	border:2px solid #333029;
+    	display:inline-block;
+    	cursor:pointer;
+    	color:#505739;
+    	font-family:Arial;
+    	font-size:28px;
+    	font-weight:bold;
+    	padding:12px 14px;
+    	text-decoration:none;
+    	text-shadow:0px 1px 0px #ffffff;
+    }
+    .gearButton:hover {
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
+    	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
+    	background-color:#ccc2a6;
+    }
+    .gearButton:active {
+    	position:relative;
+    	top:1px;
+    }
+
+
+    .logoutButton {
+      margin-left: 10px;
+    	-moz-box-shadow: 0px 1px 0px 0px #1c1b18;
+    	-webkit-box-shadow: 0px 1px 0px 0px #1c1b18;
+    	box-shadow: 0px 1px 0px 0px #1c1b18;
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #eae0c2), color-stop(1, #ccc2a6));
+    	background:-moz-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-webkit-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-o-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:-ms-linear-gradient(top, #eae0c2 5%, #ccc2a6 100%);
+    	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#eae0c2', endColorstr='#ccc2a6',GradientType=0);
+    	background-color:#eae0c2;
+    	-moz-border-radius:15px;
+    	-webkit-border-radius:15px;
+    	border-radius:15px;
+    	border:2px solid #333029;
+    	display:inline-block;
+    	cursor:pointer;
+    	color:#505739;
+    	font-family:Arial;
+    	font-size:28px;
+    	font-weight:bold;
+    	padding:12px 14px;
+    	text-decoration:none;
+    	text-shadow:0px 1px 0px #ffffff;
+    }
+    .logoutButton:hover {
+    	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ccc2a6), color-stop(1, #eae0c2));
+    	background:-moz-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-webkit-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-o-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:-ms-linear-gradient(top, #ccc2a6 5%, #eae0c2 100%);
+    	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+    	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc2a6', endColorstr='#eae0c2',GradientType=0);
+    	background-color:#ccc2a6;
+    }
+    .logutButton:active {
+    	position:relative;
+    	top:1px;
+    }
+    .white-text{
+      color:#fff;
+      font-family:courier;
+      text-align: center;
+    }
+    </style>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <header>
+      <a href="#">
+        <img class="logo" src="microplan_logo_white.png" alt="logo of microplan">
+      </a>
+    </header>
+    <div class="button-row">
+      <a href="#" class="plusButton fa fa-plus fa-2x"></a>
+      <a href="#" class="gearButton fa fa-gear fa-2x"></a>
+      <a href="#" class="logoutButton fa fa-sign-out fa-2x"></a>
+    </div>
+    <div class="container">
+      <h1 class="white-text">You are now <%= appName %></h1>
+    </div>
+  </body>
+</html>
