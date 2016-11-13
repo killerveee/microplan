@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize')
 
 module.exports = function (cb) {
-  global.sequelize = new Sequelize('postgres', 'postgres', '103107', {
+  global.sequelize = new Sequelize('postgres', 'postgres', '123456', {
     host: 'localhost',
     dialect: 'postgres',
     pool: {
@@ -13,6 +13,7 @@ module.exports = function (cb) {
   })
 
   var githubAccount = require('../api/githubAccount/model.js')
+  var githubIssue = require('../api/githubIssue/model.js')
 
   sequelize.sync().then(
     cb
