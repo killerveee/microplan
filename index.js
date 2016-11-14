@@ -23,8 +23,8 @@ initDb(function () {
 
       // middlewares
       app.use(express.static(__dirname + '/public'))
-      app.use(bodyParser.json()) // for parsing application/json
       app.use(bodyParser.urlencoded({ extended: true })) // for parsing
+      app.use(bodyParser.json()) // for parsing application/json
       app.use(expressValidator())
       app.use(session({
         secret: app.get('cookieSecret'),
@@ -37,7 +37,6 @@ initDb(function () {
 
       app.get('/',
         function (req, res) {
-
           var apiToken = req.session.microplanToken
 
           if (!apiToken) {
@@ -53,6 +52,7 @@ initDb(function () {
       )
 
       app.post('/github/issues', require('./create_issue.js'))
+      app.post('/api/githubissue', require('./api/githubIssue/post.js'))
 
       app.listen(app.get('port'),
         function () {
